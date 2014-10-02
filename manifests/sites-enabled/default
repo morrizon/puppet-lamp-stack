@@ -1,7 +1,7 @@
 <VirtualHost *:80>
-  ServerName app.local
-  DocumentRoot /vagrant/webroot
-  <Directory /vagrant/webroot>
+  ServerName localhost
+  DocumentRoot /vagrant/www/public
+  <Directory /vagrant/www/public>
     DirectoryIndex index.php index.html
     AllowOverride All
     Order allow,deny

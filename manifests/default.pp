@@ -9,5 +9,5 @@ include apache
 include php
 include php::pear
 include php::pecl
+include php::composer
 include mysql
-

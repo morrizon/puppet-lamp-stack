@@ -1,42 +1,52 @@
-# LAMP Stacks Made Easy with Vagrant & Puppet
+# Entorno LAMP
 
-Building a LAMP stack with Puppet and Vagrant to develop, test, and/or build the worlds next great application should be easy. Use this all inclusive code to quickly kickstart your next application environement.
+## Créditos
+* [jrodriguezjr/puppet-lamp-stack](https://github.com/jrodriguezjr/puppet-lamp-stack).
 
-## Shout outs!
-Credit must be given where credit is due. Most of this work was made possible by:
-* [PerishableDave/puppet-lamp-stack](https://github.com/PerishableDave/puppet-lamp-stack).
-* [jas0nkim/my-vagrant-puppet-lamp](https://github.com/jas0nkim/my-vagrant-puppet-lamp).
-
-## Prerequisites
+## Prerrequisitos
 * [Vagrant](http://www.vagrantup.com/)
 * [Virtual Box](https://www.virtualbox.org/)
 
-## Instructions
-0. Insure Vagrant and Virutal Box are installed.
-1. Install precise32 Vagrant box. (If not installed already)
+## Instrucciones
+0. Asegúrate que Vagrant and Virtual Box están instalados.
+
+1. Instala una Ubuntu 12.04 (precise) como box de Vagrant en el caso de no tenerla instalada.
 
         $ vagrant box add precise32 http://files.vagrantup.com/precise32.box
 
-2. Clone this repository.
-3. Create directory "webroot" in the root directory of the clone. This will act as your root web folder.
-4. Open up terminal, change directory to the git repo root, and start the vagrant box.
+2. Abre una terminal y sitúate en el directorio de este documento y a continuación crea la máquina virtual.
 
         $ vagrant up
 
-You're all set up. The webserver will now be accessible from http://localhost:8888
+3. Conectar a la máquina virtual vía ssh.
 
-## System Package include
+				$ vagrant ssh
 
-* apache2 - rewrite mode enabled, having virtual host with config - refer manifest/vagrant_webroot.sample
+4. Una vez en la máquina ir a la carpeta con el código de la aplicación.
+
+				$ cd /vagrant/www
+
+## Paquetes incluidos
+
+* apache2: mod rewrite activado, virtual host por defecto en manifests/sites-enabled/default.
+* composer
+* curl
+* htop
+* git
+* libapache2-mod-php5
+* mysql-server
 * php5
 * php5-cli
-* php5-mysql
-* php-pear - installed packages: phpunit and its dependencies
 * php5-dev
 * php5-gd
 * php5-mcrypt
-* libapache2-mod-php5
-* mysql-server
-* curl
+* php5-mysql
+* php-pear: paquetes instalados: phpunit y sus dependencias
+* python-software-properties
+* sendmail
 * vim
-* htop
+
+## TODO
+
+* Configuración de vim para que funcione como IDE de PHP.
+* Personalización de la máquina vía Hiera.

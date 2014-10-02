@@ -1,5 +1,6 @@
+.DS_Store
+.idea
+private
 vagrant
 .vagrant
-.idea
-webroot
-.DS_Store
+www

@@ -4,7 +4,10 @@ class tools {
   $packages = [
     "curl",
     "vim",
-    "htop"
+    "htop",
+    "sendmail",
+    "git",
+    "python-software-properties",
   ]
 
   # install packages

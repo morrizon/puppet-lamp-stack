@@ -1,3 +1,6 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
 Vagrant.configure("2") do |config|
 
   # Enable the Puppet provisioner, with will look in manifests
@@ -9,9 +12,12 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "precise32"
+  config.vm.hostname = "lamp"
 
+  config.vm.network :private_network, ip: "192.168.2.102"
   # Forward guest port 80 to host port 8888 and name mapping
   config.vm.network :forwarded_port, guest: 80, host: 8888
 
-  config.vm.synced_folder "webroot/", "/vagrant/webroot/", :owner => "www-data"
+  # Set to project folder
+  config.vm.synced_folder "www/", "/vagrant/www/", :owner => "www-data"
 end
