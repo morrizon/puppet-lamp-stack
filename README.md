@@ -29,7 +29,7 @@
 ## Paquetes incluidos
 
 * apache2: mod rewrite activado, virtual host por defecto en manifests/sites-enabled/default.
-* composer
+* composer: paquetes instalados: PHP CodeSniffer y PHP Mess Detector
 * curl
 * htop
 * git
