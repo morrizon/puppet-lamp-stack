@@ -8,23 +8,27 @@
 * [Virtual Box](https://www.virtualbox.org/)
 
 ## Instrucciones
-0. Asegúrate que Vagrant y Virtual Box están instalados.
+1. Asegúrate que Vagrant y Virtual Box están instalados.
 
-1. Instala una Ubuntu 12.04 (precise) como box de Vagrant en el caso de no tenerla instalada.
+2. Instala una Ubuntu 12.04 (precise) como box de Vagrant en el caso de no tenerla instalada.
 
         $ vagrant box add precise32 http://files.vagrantup.com/precise32.box
 
-2. Abre una terminal y sitúate en el directorio de este documento y a continuación crea la máquina virtual.
+3. Abre una terminal y sitúate en el directorio de este documento y a continuación crea la máquina virtual.
 
         $ vagrant up
 
-3. Conectar a la máquina virtual vía ssh.
+4. Conectar a la máquina virtual vía ssh.
 
 				$ vagrant ssh
 
-4. Una vez en la máquina ir a la carpeta con el código de la aplicación.
+5. La primera vez dentro de la máquina se deben instalar los plugins de vim.
 
-				$ cd /vagrant/www
+				 vagrant@lamp:~$ vim +PluginInstall +qall
+
+6. Una vez instalados ya podemos empezar a trabajar en la carpeta con el código de la aplicación.
+
+				 vagrant@lamp:~$ cd /vagrant/www
 
 ## Paquetes incluidos
 
