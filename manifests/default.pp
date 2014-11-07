@@ -5,6 +5,7 @@ Exec {
 
 include bootstrap
 include tools
+include vim
 include apache
 include php
 include php::pear

@@ -46,7 +46,15 @@
 * sendmail
 * vim
 
+## Plugins de VIM
+* [Vundle.vim](https://github.com/gmarik/Vundle.vim)
+* [vim-phpqa](https://github.com/joonty/vim-phpqa)
+* [vim-phpunitqf.git](https://github.com/joonty/vim-phpunitqf.git)
+* [vim-misc](https://github.com/xolox/vim-misc)
+* [vim-reload](https://github.com/xolox/vim-reload)
+
 ## TODO
 
-* Configuración de vim para que funcione como IDE de PHP.
+* Mejorar configuración vim como IDE de PHP.
+* Documentar el uso del IDE.
 * Personalización de la máquina vía Hiera.
