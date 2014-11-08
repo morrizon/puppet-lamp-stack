@@ -45,6 +45,7 @@
 * php5-gd
 * php5-mcrypt
 * php5-mysql
+* php5-curl
 * php-pear: paquetes instalados: phpunit y sus dependencias
 * python-software-properties
 * sendmail
